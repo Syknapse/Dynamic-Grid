@@ -54,6 +54,7 @@ img {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	align-items: center;
 	background-color: #688E26;
 }
 
@@ -86,12 +87,13 @@ img {
 	grid-template-rows: auto;
 	grid-template-areas:
 		"photo bio";
-	background-color: #666683 /*#A10702*/;
+	background-color: #666683;
 }
 
 #bill {
 	grid-area: photo;
-	border-radius: 6px;
+	width: auto;
+	height: 83px;
 }
 
 #bio {
@@ -109,11 +111,53 @@ img {
 	font-size: 12px;
 	background-color: #550527;
 	color: white;
-	min-height: 27px;
+	min-height: 28px;
 	display: block;
 }
 
 .footer > p {
 	padding-top: 5px;
 	letter-spacing: 5px;
+}
+
+/*media queries*/
+
+@media screen and (min-width: 768px){
+	.grid {
+		display: grid;
+		grid-gap: 3px;
+		max-height: 100vh;
+		background-color: black;
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows: 2fr 2fr 2fr 3.3fr 0.7fr;
+		grid-template-areas:
+			"title title title image image image image"
+			"title title title image image image image"
+			"sharing sharing article article article article article"
+			"info info article article article article article"
+			"footer footer footer footer footer footer footer";
+	}
+
+	.btn {
+		height: 40px;
+
+	}
+
+	.info {
+		grid-template-columns: auto;
+	}
+
+	#bill {
+		align-self: center;
+	}
+
+	.footer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.footer > p {
+		letter-spacing: 10px;
+	}
 }
