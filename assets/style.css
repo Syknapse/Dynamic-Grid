@@ -1,0 +1,106 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+body > div:nth-child(odd) {
+	background-color: #666;
+}
+
+body > div:nth-child(even) {
+	background-color: #ccc;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 100vw;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"image"
+		"title"
+		"sharing"
+		"article"
+		"info"
+		"footer";
+}
+
+img {
+	max-width: 100%;
+}
+
+.image {
+	grid-area: image;
+}
+
+#bike {
+	max-width: 100%;
+	height: auto;
+}
+
+.title {
+	grid-area: title;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1em;
+	padding: 5px;
+	min-height: 50px;
+}
+
+.sharing {
+	grid-area: sharing;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.btn {
+	font-size: 16px;
+	width: 30%;
+	padding: 3px;
+	margin: 5px;
+}
+
+.article {
+	grid-area: article;
+	padding: 8px;
+	text-align: justify;
+}
+
+.info {
+	grid-area: info;
+	display: grid;
+	grid-template-columns: 30vw 70vw;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"photo bio";
+}
+
+#bill {
+	grid-area: photo;
+	/*border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 2px;
+    margin: 2px;*/
+}
+
+#bio {
+	grid-area: bio;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding: 8px;
+	text-align: justify;
+}
+
+
+.footer {
+	grid-area: footer;
+	text-align: right;
+}
+
