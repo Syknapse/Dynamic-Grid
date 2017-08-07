@@ -7,14 +7,6 @@ body {
 	font-family: 'Josefin Sans', sans-serif;
 }
 
-body > div:nth-child(odd) {
-	background-color: #666;
-}
-
-body > div:nth-child(even) {
-	background-color: #ccc;
-}
-
 .grid {
 	display: grid;
 	grid-template-columns: 100vw;
@@ -34,11 +26,14 @@ img {
 
 .image {
 	grid-area: image;
+	margin: 0;
+	padding: 0;
 }
 
 #bike {
 	max-width: 100%;
 	height: auto;
+	display: block;
 }
 
 .title {
@@ -51,6 +46,7 @@ img {
 	font-size: 1em;
 	padding: 5px;
 	min-height: 50px;
+	background-color: #F44708;
 }
 
 .sharing {
@@ -58,6 +54,7 @@ img {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	background-color: #688E26;
 }
 
 .btn {
@@ -65,12 +62,21 @@ img {
 	width: 30%;
 	padding: 3px;
 	margin: 5px;
+	border: 1px solid #666;
+	background-color: #688E26;
+	border-radius: 6px;
+}
+
+.btn:hover {
+	color: #688E26;
+	background-color: #111;
 }
 
 .article {
 	grid-area: article;
 	padding: 8px;
 	text-align: justify;
+	background-color: #FAA613;
 }
 
 .info {
@@ -80,14 +86,12 @@ img {
 	grid-template-rows: auto;
 	grid-template-areas:
 		"photo bio";
+	background-color: #666683 /*#A10702*/;
 }
 
 #bill {
 	grid-area: photo;
-	/*border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 2px;
-    margin: 2px;*/
+	border-radius: 6px;
 }
 
 #bio {
@@ -101,6 +105,15 @@ img {
 
 .footer {
 	grid-area: footer;
-	text-align: right;
+	text-align: center;
+	font-size: 12px;
+	background-color: #550527;
+	color: white;
+	min-height: 27px;
+	display: block;
 }
 
+.footer > p {
+	padding-top: 5px;
+	letter-spacing: 5px;
+}
