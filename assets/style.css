@@ -120,7 +120,9 @@ img {
 	letter-spacing: 5px;
 }
 
-/*media queries*/
+/******************************/
+
+/*media query 768*/
 
 @media screen and (min-width: 768px){
 	.grid {
@@ -140,7 +142,6 @@ img {
 
 	.btn {
 		height: 40px;
-
 	}
 
 	.info {
@@ -159,5 +160,56 @@ img {
 
 	.footer > p {
 		letter-spacing: 10px;
+	}
+}
+
+/***********************************/
+
+/*media query 900*/
+
+@media screen and (min-width: 1050px){
+	.grid {
+		display: grid;
+		grid-gap: 5px;
+		height: 100vh;
+		background-color: black;
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows: 1fr 2.3fr 2fr 0.7fr;
+		grid-template-areas:
+			". title title title title title ."
+			"image image article article article article info"
+			"sharing sharing article article article article info"
+			". footer footer footer footer footer .";
+	}
+
+	body {
+		max-width: 1400px;
+		margin: auto;
+	}
+
+	.image {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+	}
+
+	.info {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 2fr;
+		grid-template-areas:
+			"photo"
+			"bio";
+	}
+
+	#bill {
+		align-self: center;
+		justify-self: center;
+	}
+
+	#bio {
+		align-self: start;
+		justify-self: center;
+		padding: 12px;
+		margin: 0;
 	}
 }
