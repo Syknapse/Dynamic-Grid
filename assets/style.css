@@ -120,11 +120,25 @@ img {
 	letter-spacing: 5px;
 }
 
+.footer a {
+	text-decoration: none;
+	color: #ddddff;
+}
+
+.footer:hover {
+	background-color: white;
+}
+
+.footer:hover a {
+	color: blue;
+	font-weight: 700;
+}
+
 /******************************/
 
-/*media query 768*/
+/*media query 700*/
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 700px) and (max-width: 1439px){
 	.grid {
 		display: grid;
 		grid-gap: 3px;
@@ -165,16 +179,16 @@ img {
 
 /***********************************/
 
-/*media query 900*/
+/*media query 1440*/
 
-@media screen and (min-width: 1050px){
+@media screen and (min-width: 1440px){
 	.grid {
 		display: grid;
 		grid-gap: 5px;
 		height: 100vh;
 		background-color: black;
 		grid-template-columns: repeat(7, 1fr);
-		grid-template-rows: 1fr 2.3fr 2fr 0.7fr;
+		grid-template-rows: 1fr 1.7fr 2.6fr 0.7fr;
 		grid-template-areas:
 			". title title title title title ."
 			"image image article article article article info"
