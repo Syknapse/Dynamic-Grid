@@ -1,4 +1,4 @@
-<h1><a href="https://syknapse.github.io/Dynamic-Grid/">Dynamic Grid</a></h1>
+<h1><a href="https://syknapse.github.io/Dynamic-Grid/" target="_blank">Dynamic Grid</a></h1>
 
 <p>A self-initiated project to explore the possibilities of CSS3 grid. Using the grid and flexbox to create three different responses to screen size with a very different set-up for each. </p>
 <figure>
